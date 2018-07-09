@@ -21,7 +21,8 @@ const route = require('./routes/route')
 app.use('/api',route)
 
 // app.use(express.static(__dirname + '/public/prac1/dist'))
-// app.use(express.static(path.join(__dirname,'public')))
+
+app.use(express.static(path.join(__dirname,'public/prac1')))
 
 app.get('/', (req,res)=>{
     res.send("hello ujjwal")

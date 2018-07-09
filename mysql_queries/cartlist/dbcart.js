@@ -1,14 +1,24 @@
 const mysql=require('mysql2');
 
-const connection =mysql.createConnection(
+const connection = mysql.createConnection(
     {
-        host:'localhost',
-        database:'bookshop',
-        user:'root',
-        password:'9891266117',
-        insecureAuth:true
+        host: 'ujjawaldb.cfmjxfzks4ne.ap-south-1.rds.amazonaws.com',
+        database: 'ujjawalDB',
+        user: 'ada',
+        password: '120120021',
+        insecureAuth: true
     }
-)
+)    
+
+// const connection =mysql.createConnection(
+//     {
+//         host:'localhost',
+//         database:'bookshop',
+//         user:'root',
+//         password:'9891266117',
+//         insecureAuth:true
+//     }
+// )
 
 // No filter
 function getCartItemsById(buyer_email){

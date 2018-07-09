@@ -1,22 +1,24 @@
 const mysql=require('mysql2');
 
-const connection =mysql.createConnection(
+const connection = mysql.createConnection(
     {
-        host:'localhost',
-        database:'bookshop',
-        user:'root',
-        password:'9891266117',
-        insecureAuth:true
+        host: 'ujjawaldb.cfmjxfzks4ne.ap-south-1.rds.amazonaws.com',
+        database: 'ujjawalDB',
+        user: 'ada',
+        password: '120120021',
+        insecureAuth: true
     }
-)
+)    
 
 function insertuser(name ,email,college,address,phone,password) {
     // console.log(title+description+price+img+'------');
+    console.log("I am here in newest")
     return new Promise(function (resolve, reject) {
-        connection.query(`INSERT INTO users (name ,email,college,address,phoneNumber,password) VALUES(?,?,?,?,?,?,?)`,
+        connection.query(`INSERT INTO users (name ,email,college,address,phoneNumber,password) VALUES(?,?,?,?,?,?)`,
             [name ,email,college,address,phone,password],
             function (err, res) {
                 if (err) {
+                    console.log(error)
                     reject(err);
                 } else {
 

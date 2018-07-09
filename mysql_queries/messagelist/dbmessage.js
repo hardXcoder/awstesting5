@@ -1,14 +1,28 @@
 const mysql=require('mysql2');
 
-const connection =mysql.createConnection(
+const connection = mysql.createConnection(
     {
-        host:'localhost',
-        database:'bookshop',
-        user:'root',
-        password:'9891266117',
-        insecureAuth:true
+        host: 'ujjawaldb.cfmjxfzks4ne.ap-south-1.rds.amazonaws.com',
+        database: 'ujjawalDB',
+        user: 'ada',
+        password: '120120021',
+        insecureAuth: true
     }
-)
+)    
+
+// query for message table
+
+// create table messagebox(
+//      reciever_id integer,
+//      message varchar(10000),
+//      sender_email varchar(1000),
+//      book_id integer,
+//      img varchar(30000),
+//      book_name varchar(3000),
+//      reciever_email varchar(500)
+//      )
+
+
 
 function insertMessage(message, sender_email, reciever_id, book_id,img,book_name,reciever_email) {
 
